@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Linkivia Tickets{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="card bg-white mt-5">
+        <div class="card-body">
+            <h5 class="card-title">Welcome, feel free to take a look</h5>
+
+            {% if app.user %}
+            <h6 class="card-subtitle mb-2 text-muted"> {{app.User.username}} </h6>
+            {% endif %}
+
+            {% if tickets > 0 %}
+            <p> this is our Tickets </p>
+            <div class="row">
+            {% for ticket in tickets %}
+                <div class="col-4 mb-3">
+                    <div class="card bg-light">
+                        <a href="{{path('ticket', {'id': ticket.id})}}" style="color: black">
+                        <h6 class="card-title card-header"> {{ ticket.subject }} </h6>
+                        <div class="card-body">
+                            <p class="card-subtitle text-muted"> category: {{ticket.category}} </p>
+                            <p class="card-text"> {{ticket.content | raw}} </p>
+                            {% if is_granted('ROLE_ADMIN') %}
+                            <blockquote class="blockquote mb-0">                            
+                            <footer class="blockquote-footer"> status: {{ticket.status}} </footer>
+                            </blockquote>
+                            {% endif %}
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            {% else %}
+            <p>Sorry no tickets available </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

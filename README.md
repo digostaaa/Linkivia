@@ -9,6 +9,8 @@ this is a little challenge that i completed
 4. make Fixtures: php bin/console d:f:l --no-interaction
 5. run server
 
+php -v 7.2.5
+Symfony -v 5.^
 
 the fixture will load a user ('user', 'user') and an admin ('linkivia', 'linkivia) or you can make your own via .../registration | .../adminregistration
 

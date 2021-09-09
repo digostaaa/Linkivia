@@ -14,4 +14,4 @@ the fixture will load a user ('user', 'user') and an admin ('linkivia', 'linkivi
 
 there is an admin dashboard in .../admin
 
-if you are using an API program, in the head section, be sure to do this key= Content-Type  Value = application/json
+if you are using an API program, in the header section, be sure to do this key= Content-Type  Value = application/json

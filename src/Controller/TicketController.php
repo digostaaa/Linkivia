@@ -27,7 +27,7 @@ class TicketController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $reply->setCreatedAt(new \DateTimeImmutable());
+            $reply->setCreatedAt(new \DateTime());
             $reply->setTicket($ticket); 
 
             $entityManager = $this->getDoctrine()->getManager();

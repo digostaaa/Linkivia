@@ -11,11 +11,11 @@
             <h5 class="card-title">Ticket Subject: {{ticket.subject}}</h5>
                 <p class="card-subtitle text-muted mb-3"> category: {{ticket.category}} </p>
                 <p class="card-text"> {{ticket.content | raw}} </p>
-                {% if is_granted('ROLE_ADMIN') %}
+                
                 <blockquote class="blockquote mb-0">                            
                 <footer class="blockquote-footer"> status: {{ticket.status}} </footer>
                 </blockquote>
-                {% endif %}
+                
                 <br>
                 {% for message in app.flashes('message') %}
                     <div class="p-3 my-2 rounded-2 bg-success"> {{message}} </div>

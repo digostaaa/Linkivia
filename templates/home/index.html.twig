@@ -23,11 +23,11 @@
                         <div class="card-body">
                             <p class="card-subtitle text-muted"> category: {{ticket.category}} </p>
                             <p class="card-text"> {{ticket.content | raw}} </p>
-                            {% if is_granted('ROLE_ADMIN') %}
+                            
                             <blockquote class="blockquote mb-0">                            
                             <footer class="blockquote-footer"> status: {{ticket.status}} </footer>
                             </blockquote>
-                            {% endif %}
+                            
                         </div>
                         </a>
                     </div>

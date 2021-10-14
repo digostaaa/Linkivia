@@ -5,7 +5,8 @@ this is a little challenge that i completed
 
 1. clone this 
 2. install dependecies: composer install
-3. make migrations: php bin/console d:m:m
+3. make migrations: php bin/console make:migration
+                    php bin/console d:m:m
 4. make Fixtures: php bin/console d:f:l --no-interaction
 5. run server
 
